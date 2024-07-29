@@ -1,1 +1,26 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Enter the second number: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.print("Enter the third number: ");
+        double num3 = scanner.nextDouble();
+
+        double product = num1 * num2;
+        double sum = num1 + num2 + num3;
+        double maximum = Math.max(num1, Math.max(num2, num3));
+
+        System.out.println("Product\t\tSum\t\tMaximum");
+        System.out.println("-------\t\t-----\t\t--------");
+        System.out.println(String.format("%.2f", product) + "\t\t" + String.format("%.2f", sum) + "\t\t" + String.format("%.2f", maximum));
+
+        scanner.close();
+    }
+}
